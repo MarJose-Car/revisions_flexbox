@@ -1,0 +1,18 @@
+<div class="block">
+                    <div class="block button_block">         
+                        
+                    
+                        <div class="block social_media_icon">
+                            <p>Suivez moi sur les réseaux sociaux</p>
+                            <a href="https://www.facebook.com/maria.decarvalhofernandes/" target="_blank" class="text-decoration-none"><i
+                                            class="fab fa-facebook-f fs-25 icon ml-2 color-facebook"></i></a>
+                            <a href="https://github.com/MarJose-Car/" target="_blank" class="text-decoration-none"><i class="fab fa-github fs-25 icon ml-2 colot-github"></i></a>
+                            <a href="https://www.linkedin.com/in/maria-jos%C3%A9-de-carvalho-fernandes-0214b0182/" target="_blank"
+                                        class="text-decoration-none"><i
+                                            class="fab fa-linkedin-in fs-25 icon color-linkedIn"></i></a>
+                            <a href="https://www.youtube.com/channel/UCrTlc6Zs91de4FA6ga07rKQ" target="_blank"
+                                        class="text-decoration-none"><i
+                                            class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>

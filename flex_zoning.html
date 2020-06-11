@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <title>Flex-Zoning</title>
+    <style>
+        header,
+        footer {
+            height: 60px;
+            background-color: aqua;
+        }
+
+        nav {
+            height: 30px;
+            background-color: burlywood;
+        }
+
+        main {
+            border: 1em solid #E1F2FE;
+        }
+
+        .s1 {
+            display: flex;
+        }
+
+        .s1 div {
+            height: 20em;
+        }
+
+        .c1 {
+            background-color: lightblue;
+            flex: 2;
+        }
+
+        .c2 {
+            background-color: #77625C;
+            flex: 2;
+        }
+
+        .c3 {
+            background-color: brown;
+            flex: 2;
+        }
+
+        .c4 {
+            background-color: pink;
+            flex: 2;
+        }
+
+        .c1,
+        .c2,
+        .c3,
+        .c4 {
+            border: 2px solid yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <header>Haut</header>
+    <nav>Menu</nav>
+    <main>
+        <section class="s1">
+            <div class="c1"></div>
+            <div class="c2"></div>
+        </section>
+        <section class="s1">
+            <div class="c3"></div>
+            <div class="c4"></div>
+        </section>
+    </main>
+    <footer>Footer</footer>
+    <hr>
+    <div id="home">
+        <a href="index.html" id="a">Accueil</a>
+    </div>
+</body>
+
+</html>

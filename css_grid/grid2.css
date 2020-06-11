@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: rgb(250, 228, 237);
+}.container {
+    display: grid;   
+}
+.c1 {
+    /* Les propriétés 'GRID-TEMPLATE-COLUMS' et 'GRID-TEMPLATE-ROWS' permetent de définir des colonnes et de rangées Les valeurs attribués à 'grid-template-columns' définissent des colonnes tandis que les valeurs atribués à 'grid-template-rows' définissent la hauteur des rangées.
+    Elle attendent des valeurs de type longueur en 'px', poucentage '%', fraction 'fr' ou la valeur 'auto*/
+
+    grid-template-columns: 100px auto;
+    grid-template-rows: 50px 50px;
+
+    /* Dans ce premier cas, notre grille possède deux colonnes d'une langeur de 100px et auto (ce qui dans ce cas fait que la deuxième colonne occupe toute la largeur restante) et deux rangées d'une hauteur de 50px chacune.*/
+}
+.c2 {
+     grid-template-columns: 1fr 2fr 1fr;
+     grid-template-rows: auto;
+
+     /* Notre deuxième grille possède trois colonnes de largeur "1fr , 2fr et 1fr" et une seule rangée d'une hauteur 'auto'. 
+     Cela signifie que l'espace va être partagé entre les colonnes de telle manière à ce que la 1ère et la 2ème colonne ocuppent la même largeur et que la 3ème occupe une largeur DEUX FOIS plus importante. Ici, cela est l'équivalent d'écrire: 25%, 50%, 25%. */
+}
+.c3 {
+    grid-template-columns: 1fr 50% 2fr;
+    grid-template-rows: 1fr 1fr;
+
+    /* Notre troixième grille(.c3) possède trois colonnes et deux rangées. Les colonnes sont définies avec "grid-template-columns: 1fr 50% 2fr;". Dans ce cas la largeur de la 2ème colonne va être calculée en 1er et les 2 autres colonnes dont la largeur est exprimée en FRACTION ('fr') vont se partager le reste de l'espace (les 50% restant donc) avec la troixième colonne qui va récupérer deux fois plus d'espace que la première. Dans ce cas la deucième prend donc 50% de la fargeur de la grille puis les 50% restants sont partagés entre la 1ère et 3ème colonnes.
+    
+    Notez qu'on va également pouvoir utiliser la fonction CSS repeat() pour définir des colonnes et des rangées de grille. Cette fonction va s'avérer utile dans le cas où on souhaite créer une grille avec beaucoup de colonnes ou de rangées semblables puisq'elle va nous permettre de récupérer un certain schéma un certain nombre de fois.
+    
+    écrire grid-template-columns: repeat(3, 1fr); est l'équivalent de grid-template-columns: 1fr 1fr 1fr;
+    
+    Enfin notez qu'on va également pouvoir passer des valeurs de types NOM aux propriétés 'grid-template-columns' et 'grid-template-rows' qui vont nous permetre de nommer les lignes precédent la colonne ou la rangée en question*/
+}
+.item {
+    border: 1px solid #000;
+}
+.bleu {
+    background: rgb(121, 250, 250);
+}
+.vert {
+    background: rgb(19, 241, 123);
+}
+.jaune {
+    background: rgb(250, 250, 29);
+}

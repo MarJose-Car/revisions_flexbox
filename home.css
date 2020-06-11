@@ -1,0 +1,16 @@
+#home{
+    display: flex;
+    justify-content: flex-end;
+}
+#a{
+    margin-bottom: 2em;
+    font-size: 1em;
+    text-decoration: none;
+    color: #FFFFFF;
+    background-color: #3A4454; 
+    text-align: center;
+    line-height: 5em;
+    border-radius: 50%;
+    min-width: 5em;
+    min-height: 5em;
+}

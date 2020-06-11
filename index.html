@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours Flexbox</title>
+    <link rel="stylesheet" href="exercice.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>CSS3 ~ FLEXBOX {display :flex;...} sur le sélecteur CSS parent direct, pas le conteneur de ma page HTML</h1>
+        <h2>Display : flex;</h2>
+
+        <h3>=>
+            <a href="flex-justify-content.html">justify-content</a>
+        </h3>
+        <div class="c1">
+            <ul>
+                <p class="titre">/!\ Par défaut "justify-content" aligne sur l'axe VERTICAL</p>
+                <li>flex-start: aligne les éléments sur le coté GAUCHE du conteneur</li>
+                <li>flex-end: aligne les éléments sur le coté DROIT du conteneur</li>
+                <li>center: aligne les éléments au CENTRE du conteneur</li>
+                <li>space-between: aligne sur toute la largeur avec des ESPACES ENTRE les éléments</li>
+                <li>space-around: aligne sur toute la largeur avec des ESPACES AUTOUR des éléments</li>
+            </ul>
+        </div>
+
+        <h3>=>
+            <a href="flex_align-items.html">align-items</a>
+            
+            <a href="flex-align-self.html">align-self</a>
+        </h3>
+        <div class="c1">
+            <ul>
+                <p class="titre">/!\ "align-items" aligne PAR DÉFAUT sur l'axe HORIZONTAL</p>
+                <li>flex-start: aligne les éléments en HAUT du conteneur</li>
+                <li>flex-end: aligne les éléments en BAS du conteneur</li>
+                <li>center: aligne les éléments au CENTRE du conteneur</li>
+                <li>baseline: aligne sur la LIGNE DE BASE du conteneur</li>
+                <li>stretch: ÉTIRE les objets sur TOUTE LA HAUTEUR du conteneur</li>
+            </ul>
+            <ul>
+                <p class="titre">/!\ "align-self"</p>
+                <li>prend les mêmes propriétés que "align-content"</li>
+                <li>mais pour un objet spécifique (une CLASSE ou un ID)</li>
+            </ul>
+        </div>
+
+        <h3>
+            =><a href="flex_direction.html">flex-direction</a>
+        </h3>
+        <div class="c1">
+            <ul>
+                <p class="titre">/!\ si la propriété est "COLUMN" ou "COLUMN-REVERSE" l'axe de JUSTIFY-CONTENT devient
+                    VERTICAL et celui de ALIGN-ITEMS devient HORIZONTAL</p>
+                <li>row: aligne les éléments en LIGNE du PREMIER au DERNIER</li>
+                <li>row-reverse: aligne les éléments en LIGNE du DERNIER au PREMIER</li>
+                <li>column: aligne les éléments en COLONNE du PREMIER au DERNIER</li>
+                <li>column-reverse: aligne les éléments en COLONNE du DERNIER au PREMIER</li>
+            </ul>
+        </div>
+
+        <h3>
+            =><a href="flex_order.html">order</a>
+        </h3>
+        <div class="c1">
+            <ul>
+                <p class="titre">ORDER change l'ORDRE des objets</p>
+                <li>chaque objet a PAR DÉFAUT la valeur "0"</li>
+                <li>"ORDER" prend comme propriété CSS des nombres (INTEGER) sans guillemets " " ni parenthèses ( )</li>
+                <li>.hotblue{ order: 2;} place l'objet ayant la classe .hotblue deux positions plus loins que celle d'origine
+                </li>
+            </ul>
+        </div>
+
+        <h3>
+            =><a href="flex_wrap.html">flex-wrap</a>
+        </h3>
+        <div class="c1">
+            <ul>
+                <p class="titre">FLEX-WRAP s'occupe de gérer le RENVOI À LA LIGNE des éléments d'une "ROW" (rangée) ou
+                    d'une "COLUMN" (colonne) </p>
+                <li>nowrap: sous les éléments restant sur la même ligne, quitte à les tasser </li>
+                <li>wrap: génère un renvoi sur une ligne additionnelle des derniers éléments afin de conserver à chacun leurs tailles d'origine  (width en row/ou / height en 'colunn') du premier au dernier)</li>
+                <li>wrap-reverse: génère un renvoi sur une ligne additionnelle des derniers éléments afin de conserver à chacun leurs tailles
+                d'origine (width en row/ou / height en 'colunn') du dernier au premier)
+                </li>
+            </ul>
+            <h3>
+                =><a href="flex_flex.html">flex</a>
+            </h3>
+            <div class="c1">
+                <ul>
+                    <p class="titre">Flex + un chiffre permet d'occuper l'espace disponible </p>
+                    <li>avec la propriété 'flex' nous pouvons permettre à un élément de grossir pour occuper tout l'espace restant</li>
+                    <li>le nombre que vous indiquez à la propriété 'flex' indique dans quels mesure il peut grossir par rapport aux autres</li>
+                    <li>.element:nth-child(1)flex:2;}</li>
+                    <li>.element:nth-child()flex:1;}</li>
+                </ul>
+                <li>Ici: le premier élément peut grossir Deux fois plus que le 2eme</li>
+        </div>
+
+
+
+
+    </div>
+</body>
+
+</html>

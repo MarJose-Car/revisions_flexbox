@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: rgb(251, 179, 191);
+}
+.container {
+    display: grid;  /* display grid, permet de définir toutes les propriétés liées aux grilles css  et va créer une grille de niveau BLOC*/
+}
+.inline-container {
+    display: inline-grid;  /* display inline-grid va créer une grille de niveau INLINE*/
+}
+.item {
+     border: 1px solid #000;
+     min-width: 100px;
+     min-height: 50px;
+}
+.bleu {
+    background: #288;
+}
+.bleu {
+    background: #2b8;
+}
+.jaune {
+    background: #bb2;
+}
+.rouge {
+    background: rgb(255, 0, 0);
+}

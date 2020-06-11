@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex align-self</title>
+    <link rel="stylesheet" href="exercice.css">
+    <style>
+        .c1 {
+            height: 20em;
+            align-self: flex-start;
+        }
+
+        .c2 {
+            align-self: flex-end;
+            height: 10em;
+        }
+
+        .c3 {
+            align-self: center;
+            height: 50em;
+        }
+
+        .c4 {
+            height: 10em;
+            align-self: baseline;
+        }
+        .deux {
+            align-self: stretch;
+            height: 10em;
+        }
+        .un {
+            align-self: start;
+            height: 20em;
+        }
+           .trois {
+            align-self: center;
+            height: 20em;
+        }
+             .quatre {
+            align-self: end;
+            height: 20em;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Exercices Flexbox {
+            display:flex;...}
+        </h1>
+        <h2>align-self</h2>
+        <h3> - Flex-end => aligne le rond #2 seul au bottom du conteneur -> class = c1 style {display: flex...}</h3>
+
+        <div class="c1">
+            </h3>
+            <div class="nb1">1</div>
+            <div class="nb2 deux">2</div>
+            <div class="nb3">3</div>
+            <div class="nb4">4</div>
+        </div>
+        <h3> - Flex-start => aligne le rond #1 seul au top du conteneur -> class = c1 style {display: flex...}</h3>
+        <div class="c2">
+            </h3>
+            <div class="nb1 un">1</div>
+            <div class="nb2">2</div>
+            <div class="nb3">3</div>
+            <div class="nb4">4</div>
+        </div>
+        <h3></h3> - center => aligne le rond #2 au centre sans s'étirer (no strech du conteneur -> class = c1 style {display: flex...}
+        <div class="c3">
+            </h3>
+            <div class="nb1">1</div>
+            <div class="nb2">2</div>
+            <div class="nb3 trois">3</div>
+            <div class="nb4">4</div>
+        </div>
+        <h3> - baseline => aligne les objets sur l'axe de base du conteneur -> class -> class = c1 style
+            {display: flex...} </h3>
+        <div class="c4">
+            </h3>
+            <div class="nb1">1</div>
+            <div class="nb2">2</div>
+            <div class="nb3">3</div>
+            <div class="nb4 quatre">4</div>
+        </div>
+        <h3> - strech => aligne les objets dans le conteneur avec des espaces égaux autour d'eux -> class -> class = c1
+            style
+            {display: flex...} </h3>
+        <div class="c5">
+            </h3>
+            <div class="nb1">1</div>
+            <div class="nb2">2</div>
+            <div class="nb3">3</div>
+            <div class="nb4">4</div>
+        </div>
+
+        <div id="home">
+            <a href="index.html">Accueil</a>
+
+    </div>
+
+</body>
+
+</html>

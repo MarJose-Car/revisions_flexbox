@@ -1,0 +1,53 @@
+/* La deuxième manière de positionner des éléments dans une grille est de définir des zones de grilles et d'attribuer les zones aux différents éléments de grille. Pour faire cela, nous allons utiliser la propriété 'grid-area' avec nos éléments de grille. Cette propriété va pouvoir être utilisée de Deux façons differentes:
+    - En propriété ULTRA RACCOURCIE des précédentes (row/column: start/end); en lui passant 4 valeurs qui correpondent aux valeurs de 'ROW-START', 'COLUMN-START', 'ROW-END', 'COLUMN-END'.
+    Cela permet de définir imédiatement une zone de grille dans laquelle sera positionné l'élément.
+    ->En lui passant un nom de zone qui va pouvoir être utilisé par la propriété 'GRID-TEMPLATE-AREAS'
+
+La propriéte 'GRID-TEMPLATE-AREAS' va utiliser les Noms Définis avec 'GRID-AREA' et indiquer la place dans la grille qui va être liée à chaque nom. En bref, cette propriété va nous permettre de construire visuellement une grille à partir des noms de zones définis avec 'GRID-AREAS'.
+
+Les grilles vont être construites rangée par rangée. Chaque répétition d'un nom de 'GRID-AREAS' indique que la zone doit englober une cellule de plus. Les zones dites 'non rectangulaires' ne sont pour le moment pas autorisées. Un point (.) indique une cellule vide (une cellule sans zone attibuée).
+*/
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 50px);
+
+    
+    grid-template-areas: 
+    "zone1 zone1 zone1"
+    ". . zone3"
+    ". zone2 zone3";
+    border: 2px solid red;
+}
+.un {
+    grid-area: zone1;
+}
+.deux {
+    grid-area: zone2;
+}
+.trois {
+    grid-area: zone3;
+}
+
+/* Ici nous possédons une grille à 3 colonnes, 3 rangées, et possédent 3 éléments. On commence par définir une zone pour chaque élément avec 'GRID-AREA' sur le conteneur à fin d'indiquer quelles cellules de grille ces zones doivent couvrir. Chaque paire de guillemets doit (" ") indiquer une nouvelle ligne dans la grille. Chaque répétition de nom indique une nouvelle cellule que la zone doit couvrir. 
+
+Ici par exemple, on commence par écrire "zonz1 zone1 zone1". Cela signifie que la zone "zone1" devra couvrir la 1ère, la 2ème et la 3ème cellule de la 1ère rangée.
+
+Ensuite, on a ". . zone3". Cela signifie que les deux 1ères cellules de la 2ème rangée, sont liées à des noms de zone tandis que la zone "zone3" devra couvrir la 3ème zone.
+
+Notez qu'on peut également utiliser la propriété raccourcie 'GRID-TEMPLATE' qui permet de définir en une fois les valeurs des propriétés:
+    -'GRID-TEMPLATE-ROWS'
+    -'GRID-TEMPLATE-COLUMNS'
+    -'GRID-TEMPLATE-AREAS'
+    */
+
+.bleu {
+    background: rgb(121, 250, 250);
+}
+.vert {
+    background: rgb(19, 241, 123);
+}
+.jaune {
+    background: rgb(250, 250, 29);
+}

@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: rgb(247, 175, 133);
+}.container {
+    display: grid;   
+    grid-template-columns: repeat(5, 1fr); 
+    grid-template-rows: repeat(3, 50px);
+    border: 2px solid rgb(248, 119, 119);
+    /*Ici on définie une grille de 5 colonnes et 3 rangées régulières */ 
+}
+/* Pour positionner les éléments dans une grille, nous allons pouvoir utiliser les propriétés 'grid-column-start', 'grid-column-end', 'grid-row-start', grid-row-end', ou leurs versions raccourcies 'grid-column' et 'grid-row'. Ces propriétés vont nous permettre de spécifier les lignes de départ et de fin pour l'axe vertical (column) et l'axe horizontal (row) pour chaque élément de la grille.*/
+
+.un {
+     grid-column-start: 1;
+     grid-column-end: 3;
+     grid-row-start: 1;
+     grid-row-end: 4;
+}
+
+/* On indique ici que le début de notre premier élément doit se placer contre la première ligne verticale (ligne des colonnes, c'est à dire tout à gauche) et contre la première ligne horizontale (ligne des rangées, c'est à dire tout en haut) et qu'il doit couvrir la surface jusqu'à la 3ème ligne verticale(c'est à dire couvrir l'espace relatif aux deux première colonnes) et jusqu'à la 4éme ligne horizontale (c'est à dire tout l'espace en hauteur.*/
+
+.deux {
+    grid-column-start: 3;
+    grid-column-end: 6;
+}
+
+/* (.deux) -> Ici on ne précise que les propriétés grid-column-start et grid-column-end et on lui demande de commencer au niveau de la 3ème ligne verticale et de couvrir l'espace jusqu'à la 6ème ligne verticale. Sa "hauteur" (le nombre de rangées de la grille qu'il devra occuper) sera celle par défaut, c'est à dire une rangée */
+
+/*Les versions raccourcies ('grid-column' et 'grid-row' attendent DEUX valeurs:
+    - la valeur de la ligne de départ
+    - la valeur de la ligne de fin pour l'axe concerné row ou column 
+Ces deux valeurs doivent être séparées par un slash '/' -> ex: 3/7
+*/
+
+
+.trois {
+    grid-column: 5/6;
+    grid-row: 5/4;
+}
+
+/*(.trois) -> Notre 3ème élément est positionné grâce aux propriétés 'grid-column' et 'grid-row' . On indique deux valeurs à chaque fois pour ces deux propriétés séparées par un slash. La première valeur correspond à la ligne de départ et la deuxième à la ligne d'arrivée.*/
+ 
+.bleu {
+    background: rgb(121, 250, 250);
+}
+.vert {
+    background: rgb(19, 241, 123);
+}
+.jaune {
+    background: rgb(250, 250, 29);
+}
+
