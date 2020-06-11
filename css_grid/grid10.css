@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Si un élément de grille est positionné dans une rangée ou une colonne qui n'est pas dimensionnée de manière explicite  avec 'GRID-TEMPLATE-ROWS' ou 'GRID-TEMPLATE-COLONNES', des pistes de grille implicites sont créées pour les contenir.
+
+Les pistes implicites sont créees lorsqu'il y a plus d'éléments de grille que de cellules dans la grille (auquel ces un algorithme de placement automatique va créer des rangées ou des colonnes suplémentaires) ou lorsqu'un élément de grille est placé en dehors de la grille explicite.
+
+On va pouvoir définir des taille souhaitées pour ces pistes implicites grâce aux propriétés 'GRID-AUTO-COLONNES' et 'GRID-AUTO-ROWS'.
+
+Notez que si plusieurs tailles de piste sont données, le modèle est répété autant de fois que nécessaire pour déterminer la taille des pistes implicites.
+La 1ère piste de grille implicite reçoit le 1ère taille spécifiée, et ainsi de suite.
+*/
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 50px);
+    grid-auto-columns: 2fr 1fr;
+    grid-auto-rows: 30px;
+    border: 2px solid red;
+    margin-bottom: 10px;
+}
+.c2 .trois {
+    grid-column: 3/4;
+}
+.c2 .quatre {
+    grid-column: 4/5;
+}
+.c2 .cinq {
+    grid-column: 5/6;
+}
+.bleu {
+    background: rgb(121, 250, 250);
+}
+.vert {
+    background: rgb(19, 241, 123);
+}
+.jaune {
+    background: rgb(250, 250, 29);
+}
+.rouge {
+    background: rgb(250, 0, 0);
+}
+
+/* Dans cet exemple, on crée 2 grilles possédant 2 colonnes et 2 rangées définies de manière EXPLICITE. Nos 2 grilles contiennent 6 éléments (div), c'est-à-dire 2 éléments de plus que de cellules. Des pistes implicites vont donc être créées.
+
+Dans notre grille, nous ne donnons pas d'instructions de placement des éléments. Chaque élément va occuper une cellule et une 3ème rangée va être créer IMPLICITEMENT pour 'accueillir' les 2 éléments 'en trop'.
+
+Dans notre deuxième grille, en revanche, nous plaçons des éléments en dehors des pistes explicites de la grille. Des pistes vont donc être créées IMPLICITEMENT selon le modèle fourni par 'GRID-AUTO-COLUMNS' dans ce cas puisque nous avons placé nos éléments dans des colonnes qui n'ont pas été définies EXPLICITEMENT.
+*/

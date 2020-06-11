@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 /* La deuxième manière de positionner des éléments dans une grille est de définir des zones de grilles et d'attribuer les zones aux différents éléments de grille. Pour faire cela, nous allons utiliser la propriété 'grid-area' avec nos éléments de grille. Cette propriété va pouvoir être utilisée de Deux façons differentes:
     - En propriété ULTRA RACCOURCIE des précédentes (row/column: start/end); en lui passant 4 valeurs qui correpondent aux valeurs de 'ROW-START', 'COLUMN-START', 'ROW-END', 'COLUMN-END'.
     Cela permet de définir imédiatement une zone de grille dans laquelle sera positionné l'élément.

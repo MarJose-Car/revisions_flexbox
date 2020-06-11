@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Les éléments "JUSTIFY-ITEMS" et "JUSTIFY-SELF" vont nous permettre d'aligner les éléments de l'axe INLINE du document.
+Ces propriétés supportent les valeurs suivants:
+    - STRECH: l'élément ou les éléments vont s'étendre pour occuper toute leur zone. C'est la valeur par défaut
+    - START: l'élément ou les éléments seront alignés contre le "début" de leur zone
+    - END: l'élément ou les éléments seront alignés contre la 'fin' de leur zone
+    - CENTER: l'élément ou les éléments seront centrés dans leur zone
+*/
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 50px);
+    border: 2px solid red;
+    margin-top: 10px;
+}
+.c2 {
+    justify-items: start;
+}
+.c2 .trois {
+    justify-self: end;
+}
+.bleu {
+    background: rgb(121, 250, 250);
+}
+.vert {
+    background: rgb(19, 241, 123);
+}
+.jaune {
+    background: rgb(250, 250, 29);
+}
+
+/* On définie ici deux grilles, on ne précise pas de 'JUSTIFY-ITEMS' ni 'JUSTIFY-SELF' pour la 1ère grille; les valeurs par défaut (STRECH) vont donc être utilisés.
+
+On applique un 'JUSTIFY-ITEMS: START' à notre 2ème grille. Cela va faire en sorte que les éléments se placent au début de la zone qui leur est réservée (et n'occupent QUE la place néessaire plutôt que de 'STRECH' c'est à dire s'étendre par défaut)
+
+On définit également un 'JUSTIFY-SELF :END' pour le dernier élément de notre 2ème grille. Comme la propriété 'JUSTIFY-SELF' cible plus précisement que 'JUSTIFY-ITEMS', elle sera traitée en priorité et c'est la raison pour laquelle le dernier élément de la grille est aligné contre la fin de sa zone selon l'axe horizontale (c'est à dire à droite)
+*/

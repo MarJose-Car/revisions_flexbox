@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Le modèle des grilles nous fournit également des propriétés raccourcies qui nous permettent d'aligner un ou des éléments de grille par rapport aus deux axes d'un coup.
+
+ Ces propriétés CSS sont 'PLACE-ITEMS' et 'PLACE-SELF'.
+ On va pouvoir leur passer une 1ère valeur qui va définir le comportement de 'ALIGN-ITEMS/ALIGN-SELF' et une 2ème qui définira le comportement de 'JUSTIFY-ITEMS/JUSTIFY-SELF'.
+ On peut également ne préciser q'une valeur qui sera alors utilisées pour l'alignement des DEUX AXES.
+*/
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 50px;
+    border: 2ps solid red;
+    margin-bottom: 10px;
+}
+.c2 {
+    place-items: center;
+}
+.c2 .trois {
+    place-self: start end;
+}
+.bleu {
+    background: rgb(121, 250, 250);
+}
+.vert {
+    background: rgb(19, 241, 123);
+}
+.jaune {
+    background: rgb(250, 250, 29);
+}
+
+/* Ici, on utilise 'PLACE-ITEMS' pour realiser très simplement un centrage parfait des éléments de grille par rapport à leur zone. Notez q'uon utilise cette fois une grille qui possède 3 éléments et une seule rangée.
+Le 3ème élément possède un 'PLACE-SELF: START END', il sera aligné au début de sa zone selon l'axe vertical (= en haut) et à la fin selon l'axe horizontal (= à droite).
+*/

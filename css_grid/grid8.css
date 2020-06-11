@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Il arrive parfois que l'ensemble des éléments qui constituent une grille ait une taille inférieur à celle du conteneur de grille.
+
+Cela peut se produire notamment dans le cas ou on aurait définit das valeurs de taille fixes pour les pistes de grille.
+
+Imaginez par exemple que l'on crée une grille 'display: grid' de trois colonnes et un rangé en indiquant que chaque colonne doit faire 150px de large et chaque rangée 100px de haut.
+
+Dans ce cas, notre grille aura une taille de 450px * 100px. Cependant, le conteneur de grille va lui occuper tout l'espace disponible dans son élément parent et va donc pouvoir être plus grand que ce qu'il contient. De même, l'unique rangée de la grille va faire 100px de hauteur mais le conteneur peut avoir une hauteur plus grande.
+
+Dans ces cas-là, on va pouvoir aligner l'ensemble de la grille dans le conteneur de grille avec les propriétés 'JUSTIFY-CONTENT' et 'ALIGN-CONTENT'.
+
+La propriété 'JUSTIFY-CONTENT' permet un alignement selon l'axe de ligne où l'axe des rangées qui est pour nous l'axe horizontal. 
+Tandis que 'ALIGN-CONTENT" permet un alignement selon l'axe de bloc ou axe des colonnes qui correspondent pour nous à l'axe vertical.
+
+Ces propriétés supportent les mêmes valeurs qui sont les suivantes:
+    - START: la grille sera alignée contre le début de son conteneur selon l'axe correspondant
+    - END: La grille sera alignée contre la fin de son conteneur selon l'axe correspondant
+    -CENTER: La grille sera centrée dans son conteneur selon l'axe correspondant
+    - STRECH: redimensionne les pistes de grille afin qu'elles occupent tout l'espace dans le conteneur selon l'axe correpondant
+    - SPACE-AROUND: répartit équitablement l'espace disponible entre les différentes pistes dans l'axe correspondant. L'espace entre les bords du conteneur et la première et la dernière piste sera deux fois moins important qu'entre deux pistes
+    - SPACE-BETWEEN: répartit équitablement l'espace disponible entre les diférentes pistes dans l'axe correspondant mais ne laisse pas d'espace entre les bords du conteneur et la première/dernière piste.
+    - SPACE-EVENLY: répartit équitablement l'espace disponible entre les différentes pistes dans l'axe correspondant.
+*/
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(2, 25px);
+    border: 2px solid red;
+    margin-bottom: 10px;
+    min-width: 500px;
+    min-height: 100px;
+}
+.c2 {
+    justify-content: center;
+    align-content: end;
+}
+.c3 {
+    justify-content: space-between;
+    align-content: space-evenly;
+}
+.bleu {
+    background: rgb(121, 250, 250);
+}
+.vert {
+    background: rgb(19, 241, 123);
+}
+.jaune {
+    background: rgb(250, 250, 29);
+}
+.rouge {
+    background: rgb(250, 0, 0);
+}
+
+/* Ici, on crée 3 grilles de 3 colonnes, 2 rangées et on définit des tailles fixes pour nos colonnes (150px de large) et nos rangées (25px de haut). On définit également des tailles fixes minimales de 500px * 100px pour le conteneur.
+
+Notre 1ère grille ne contient aucune propriété, elle est affichée par défaut.
+
+On applique 'JUSTIFY-CONTENT: SPACE-BETWEEN' et 'ALIGN-CONTENT: SPACE-EVENLY' à notre 2ème grille.
+
+La valeur 'JUSTIFY-CONTENT: SPACE-BETWEEN va répartir équitablement l'espaca restant selon l'axe de la ligne (horizontale) entre les colonnes en ne laissant aucun espace entre la première/dernière colonne et le bord du conteneur.
+
+La valeur 'ALIGN-CONTENT: SPACE-EVENLY' va répartir équitablement l'espace restant selon l'axe de bloc (vertival) entre les rangées de la grille.
+
+Notez qu'on peut également utiliser la propriété raccourcie 'PLACE-CONTENT' pour définir les valeurs 'ALIGN-CONTENT' et 'JUSTIFY-CONTENT' d'un coup.
+*/

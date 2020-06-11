@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* On va pouvoir aligner des éléments de grille selon l'axe de bloc (ou axe des colonnes) qui sera pour nous l'axe VERTICAL grâce aux propriétés 'ALIGN-ITEMS' et 'ALIGN-SELF'.
+
+Ces propriétés vont s'utiliser EXACTEMENT comme les précédentes et on va pouvoir leur passer les mêmes valeurs 'START', 'END', 'CENTER' et 'STRECH' (strech = valeur par défaut). Le 'début' de l'axe sera pour nous le BORD SUPÉRIEUR tandis que la 'fin' sera le BORD INFÉRIEUR.
+*/
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 50px);
+    border: 2px solid red;
+    margin-top: 10px;
+}
+.c2 {
+    align-items: center;
+}
+.c2 .trois {
+    align-self: end;
+}
+.bleu {
+    background: rgb(121, 250, 250);
+}
+.vert {
+    background: rgb(19, 241, 123);
+}
+.jaune {
+    background: rgb(250, 250, 29);
+}
+
+/* Notez bien ici les éléments sont TOUJOURS alignés au sein de la zone qui leur est réservée. Ainsi, si nos éléments n'occupent qu'une seule rangée de la grille par exemple, ils seront alignés dans l'espace de cette rangée et le même pour les colonnes.
+
+Dans notre exemple, nous ne donnons aucune consigne de positionnement à nos éléments (positionnement qui dépend des propriétés 'GRID-COLUMN' et 'GRID-ROW', etc). C'est la raison pour laquelle le 3éme élément de notre 2ème grille (qui posséde un align-self: end) n'est pas collé contre le bord inférieur de la grille mais simplement contre le bord inférieur de la rangée à laquelle il appartient.
+*/
+
+/* alt+144 = 'É' */
